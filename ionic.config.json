@@ -1,0 +1,7 @@
+{
+  "name": "nusantara-app",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
