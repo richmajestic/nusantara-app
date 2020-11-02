@@ -1,0 +1,53 @@
+<ion-content class="container">
+  <ion-grid>
+    <ion-row class="ion-justify-content-center">
+      <ion-img class="gambarMacan" [src]="maungSource"></ion-img>
+    </ion-row>
+
+    <ion-row class="ion-justify-content-center" style="margin-bottom: 20px">
+      <ion-text class="welcomeText">Selamat datang kembali!</ion-text>
+    </ion-row>
+
+    <ion-row class="ion-justify-content-center">
+      <div class="textFieldContainer">
+        <ion-input
+          [(ngModel)]="emailText"
+          class="textInput"
+          placeholder="Email"
+        ></ion-input>
+      </div>
+    </ion-row>
+    <ion-row class="ion-justify-content-center">
+      <div class="textFieldContainer">
+        <ion-input
+          [(ngModel)]="passwordText"
+          class="textInput"
+          placeholder="Password"
+          type="password"
+        ></ion-input>
+      </div>
+    </ion-row>
+
+    <ion-row class="ion-justify-content-center">
+      <ion-label
+        style="
+          color: red;
+          font-weight: bold;
+          font-size: 18px;
+          margin-bottom: 12px;
+        "
+        >{{errorText}}</ion-label
+      >
+    </ion-row>
+
+    <ion-row class="ion-justify-content-center">
+      <ion-button
+        (click)="onClickLogin()"
+        color="secondary"
+        style="width: 40%; --border-radius: 25px"
+      >
+        <ion-label style="font-weight: bold; color: black">MASUK</ion-label>
+      </ion-button>
+    </ion-row>
+  </ion-grid>
+</ion-content>

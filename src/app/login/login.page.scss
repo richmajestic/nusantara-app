@@ -1,0 +1,25 @@
+.container {
+  --ion-background-color: #f5b461;
+}
+
+.welcomeText {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.textFieldContainer {
+  width: 80%;
+  border-radius: 20px;
+  background-color: white;
+  margin-bottom: 20px;
+}
+
+.textInput {
+  margin: 2px 18px 2px 18px;
+  font-size: 18px;
+}
+
+.buttonContainer {
+  border-radius: 20px;
+  padding: 8px;
+}
