@@ -36,6 +36,9 @@
                 "input": "src/theme/variables.scss"
               },
               {
+                "input": "src/assets/font/KGConeroftheSky.scss"
+              },
+              {
                 "input": "src/global.scss"
               }
             ],

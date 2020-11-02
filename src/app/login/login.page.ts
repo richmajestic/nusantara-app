@@ -10,7 +10,7 @@ import { FetchService } from "../service/fetch.service";
   providers: [FetchService],
 })
 export class LoginPage implements OnInit {
-  @Input() emailText: string;
+  @Input() usernameText: string;
   @Input() passwordText: string;
   errorText: string = "";
 
@@ -21,7 +21,7 @@ export class LoginPage implements OnInit {
   ngOnInit() {}
 
   onClickLogin() {
-    if (!this.emailText || !this.passwordText) {
+    if (!this.usernameText || !this.passwordText) {
       this.errorText = "Mohon isi semua field";
       return;
     }

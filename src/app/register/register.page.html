@@ -5,10 +5,19 @@
     </ion-row>
 
     <ion-row class="ion-justify-content-center" style="margin-bottom: 20px">
-      <ion-text class="welcomeText">Selamat datang kembali!</ion-text>
+      <ion-text class="welcomeText">"Tak kenal maka tak sayang"</ion-text>
+      <ion-text class="welcomeText">Yuk beritahu Maung siapa namamu!</ion-text>
     </ion-row>
 
-   
+    <ion-row class="ion-justify-content-center">
+      <div class="textFieldContainer">
+        <ion-input
+          [(ngModel)]="namaText"
+          class="textInput"
+          placeholder="Nama"
+        ></ion-input>
+      </div>
+    </ion-row>
     <ion-row class="ion-justify-content-center">
       <div class="textFieldContainer">
         <ion-input
@@ -32,7 +41,7 @@
     <ion-row class="ion-justify-content-center">
       <ion-label
         style="
-          color: #f3eac2;
+          color: #f3eac2;;
           font-size: 14px;
           margin-bottom: 12px;
         "
@@ -42,12 +51,25 @@
 
     <ion-row class="ion-justify-content-center">
       <ion-button
-        (click)="onClickLogin()"
+        (click)="onClickRegister()"
         color="secondary"
         style="width: 40%; --border-radius: 25px"
       >
-        <ion-label style="font-weight: bold; color: black">MASUK</ion-label>
+        <ion-label style="font-weight: bold; color: black">LANJUT</ion-label>
       </ion-button>
     </ion-row>
+
+    <ion-row class="ion-justify-content-center">
+      <ion-label
+        style="
+          color: black;;
+          font-size: 14px;
+          margin-bottom: 12px;
+        "
+        (click)="toLogin()"
+        >Sudah Memiliki Akun</ion-label
+      >
+    </ion-row>
+
   </ion-grid>
 </ion-content>
