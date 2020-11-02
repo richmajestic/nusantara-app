@@ -2,6 +2,7 @@ import { Component, Input, OnInit } from "@angular/core";
 
 import { MaungImage } from "../../assets";
 import { FetchService } from "../service/fetch.service";
+import { Router } from '@angular/router';
 
 @Component({
   selector: "app-login",
@@ -16,7 +17,9 @@ export class LoginPage implements OnInit {
 
   public maungSource = MaungImage;
 
-  constructor(public fetchService: FetchService) {}
+  constructor(
+    public fetchService: FetchService,
+    public router : Router) {}
 
   ngOnInit() {}
 
@@ -25,5 +28,12 @@ export class LoginPage implements OnInit {
       this.errorText = "Mohon isi semua field";
       return;
     }
+    else{
+      this.router.navigateByUrl('/tabs');
+    }
+  }
+
+  toRegister(){
+    this.router.navigateByUrl('/register');
   }
 }
