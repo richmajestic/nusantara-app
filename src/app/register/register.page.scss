@@ -1,0 +1,30 @@
+@import "../../assets/font/KGCorneroftheSky.scss";
+
+$font-family : 'KG Corner of the Sky';
+
+*{
+  font-family: $font-family;
+  font-size : 14px;
+}
+
+.container {
+    --ion-background-color: #f5b461;
+}
+
+.textFieldContainer {
+    width: 90%;
+    height: 35px;
+    border-radius: 20px;
+    background-color: white;
+    margin-bottom: 20px;
+}
+  
+.textInput {
+    font-size : 10px;
+    margin: 2px 15px 2px 15px;
+}
+  
+.buttonContainer {
+    border-radius: 20px;
+    padding: 8px;
+}
