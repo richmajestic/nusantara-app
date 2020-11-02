@@ -18,6 +18,7 @@ export class RegisterPage implements OnInit {
   constructor(private route : Router) { }
 
   ngOnInit() {
+
   }
 
   onClickRegister() {
