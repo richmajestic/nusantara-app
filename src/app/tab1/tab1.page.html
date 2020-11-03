@@ -1,15 +1,18 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title> Tab 1 </ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <div class="header">
+    <ion-chip  class="score">
+      <ion-avatar>
+        <img style="background-color: white;" src="../../assets/score.png">
+      </ion-avatar>
+      <ion-label style="color:#f3eac2;">[score]</ion-label>
+    </ion-chip>
+    <ion-avatar class="profilePic">
+      <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
+    </ion-avatar>
+  </div>
+
+    
+
 
   <ion-list>
     <ion-item *ngFor="let content of contents">
