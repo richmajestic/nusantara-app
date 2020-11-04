@@ -1,22 +1,120 @@
-<ion-content [fullscreen]="true">
-  <div class="header">
-    <ion-chip  class="score">
-      <ion-avatar>
-        <img style="background-color: white;" src="../../assets/score.png">
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <div class="header">
+      <ion-chip class="score">
+        <ion-avatar>
+          <img style="background-color: white" src="../../assets/score.png" />
+        </ion-avatar>
+        <ion-label style="color: #f3eac2">[score]</ion-label>
+      </ion-chip>
+      <ion-avatar class="profilePic">
+        <img
+          src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y"
+        />
       </ion-avatar>
-      <ion-label style="color:#f3eac2;">[score]</ion-label>
-    </ion-chip>
-    <ion-avatar class="profilePic">
-      <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
-    </ion-avatar>
+    </div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div
+    style="
+      display: flex;
+      width: 100%;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      padding-bottom: 40px;
+    "
+  >
+    <ion-img
+      class="gambarMacan"
+      [src]="maungSource"
+      style="background-color: red"
+    ></ion-img>
+    <div
+      style="
+        display: flex;
+        width: 90%;
+        padding: 28px 22px 28px 22px;
+        justify-content: center;
+        background-color: #cce9dd;
+        border-radius: 28px;
+        margin-bottom: 32px;
+      "
+    >
+      <div
+        style="
+          display: flex;
+          width: 100%;
+          align-items: center;
+          padding: 20px 12px 20px 12px;
+          background-color: white;
+          border-radius: 28px;
+        "
+      >
+        <div
+          style="
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+            margin-right: 8px;
+          "
+        >
+          <ion-label style="margin-bottom: 8px">{{currentCategory}}</ion-label>
+          <ion-progress-bar
+            value="{{currentProgress/totalLevel}}"
+            style="height: 10px; --progress-background: #00909e"
+          ></ion-progress-bar>
+        </div>
+
+        <ion-button
+          style="
+            --background: #1f909f;
+            --background-focused: #0f808f;
+            --background-activated: #0f808f;
+          "
+          >LANJUT</ion-button
+        >
+      </div>
+    </div>
+
+    <!-- KATEGORI -->
+    <div style="display: flex; width: 85%; flex-direction: column">
+      <ion-label
+        style="font-size: medium; font-weight: bold; margin-bottom: 20px"
+        >KATEGORI</ion-label
+      >
+
+      <!-- Ini gatau gmn scroll horizontal -->
+      <div style="display: flex; flex-direction: row">
+        <div
+          *ngFor="let kategori of arrayOfKategori"
+          style="
+            display: flex;
+            width: 150px;
+            height: 150px;
+            flex-direction: column;
+            background-color: {{kategori.warna}};
+            justify-content: center;
+            align-items: center;
+            border-radius: 20px;
+            margin-right: 20px;
+          "
+        >
+          <ion-label>{{kategori.nama}}</ion-label>
+          <ion-label>{{kategori.jumlahPertanyaan}} pertanyaan</ion-label>
+        </div>
+      </div>
+    </div>
   </div>
 
-    
-
-
+  <!-- 
   <ion-list>
     <ion-item *ngFor="let content of contents">
       <ion-label>{{content}}</ion-label>
     </ion-item>
-  </ion-list>
+  </ion-list> -->
 </ion-content>
