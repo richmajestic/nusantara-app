@@ -22,11 +22,11 @@ export class Tab1Page {
       jumlahPertanyaan: 10,
       warna: "#FBDCDB",
     },
-    // {
-    //   nama: "RUMAH MAKAN",
-    //   jumlahPertanyaan: 10,
-    //   warna: "#D1F4E6",
-    // },
+    {
+      nama: "RUMAH MAKAN",
+      jumlahPertanyaan: 10,
+      warna: "#D1F4E6",
+    },
   ];
 
   constructor() {}
