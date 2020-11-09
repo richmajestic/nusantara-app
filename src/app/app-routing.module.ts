@@ -13,8 +13,16 @@ const routes: Routes = [
       import("./login/login.module").then((m) => m.LoginPageModule),
   },
   {
-    path: 'register',
-    loadChildren: () => import('./register/register.module').then( m => m.RegisterPageModule)
+    path: "register",
+    loadChildren: () =>
+      import("./register/register.module").then((m) => m.RegisterPageModule),
+  },
+  {
+    path: "level-select/:kategoriId",
+    loadChildren: () =>
+      import("./level-select/level-select.module").then(
+        (m) => m.LevelSelectPageModule
+      ),
   },
 ];
 @NgModule({
