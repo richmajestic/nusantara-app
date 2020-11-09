@@ -13,16 +13,19 @@ export class Tab1Page {
   public totalLevel: number = 10; // Total level dari kategori terakhir
   public arrayOfKategori = [
     {
+      id: "floraFauna",
       nama: "FLORA & FAUNA",
       jumlahPertanyaan: 25,
       warna: "#D1F4E6",
     },
     {
+      id: "bangunanIkonik",
       nama: "BANGUNAN IKONIK",
       jumlahPertanyaan: 10,
       warna: "#FBDCDB",
     },
     {
+      id: "rumahMakan",
       nama: "RUMAH MAKAN",
       jumlahPertanyaan: 10,
       warna: "#D1F4E6",

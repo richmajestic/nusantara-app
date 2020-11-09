@@ -1,8 +1,15 @@
 import MaungImage from "./raffi.png";
 import tabsHome from "./home.png";
 import tabsLeaderboard from "./leaderboard.png";
+import CorrectIcon from "./correct.png";
+import FalseIcon from "./false.png";
+import PreviousIcon from "./previous.png";
 
-export { MaungImage };
-export { tabsHome };
-export { tabsLeaderboard };
-
+export {
+  MaungImage,
+  tabsHome,
+  tabsLeaderboard,
+  CorrectIcon,
+  FalseIcon,
+  PreviousIcon,
+};
