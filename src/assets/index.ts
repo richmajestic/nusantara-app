@@ -4,6 +4,7 @@ import tabsLeaderboard from "./leaderboard.png";
 import CorrectIcon from "./correct.png";
 import FalseIcon from "./false.png";
 import PreviousIcon from "./previous.png";
+import MaungTrophy from "./maungTrophy.png";
 
 export {
   MaungImage,
@@ -12,4 +13,5 @@ export {
   CorrectIcon,
   FalseIcon,
   PreviousIcon,
+  MaungTrophy
 };
