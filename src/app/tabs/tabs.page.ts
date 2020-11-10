@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { tabsHome } from '../../assets';
 import { tabsLeaderboard } from '../../assets';
 import { MaungImage } from "../../assets";
+import { Storage } from '@ionic/storage';
 
 @Component({
   selector: 'app-tabs',
@@ -12,6 +13,11 @@ export class TabsPage {
   public tabsHome = tabsHome;
   public tabsLeaderboard = tabsLeaderboard;
   public tabsProfile = MaungImage;
-  constructor() {}
+  
+  constructor(public storage : Storage) {
+    storage.get('userId').then((parameter) => {
+    console.log('Received Parameter: ' + parameter);
+  });
+}
 
 }
