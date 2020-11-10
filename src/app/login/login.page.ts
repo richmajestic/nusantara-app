@@ -4,6 +4,9 @@ import { MaungImage } from "../../assets";
 import { FetchService } from "../service/fetch.service";
 import { Router } from '@angular/router';
 import { Md5 } from "md5-typescript";
+import { NavController } from '@ionic/angular';
+import { Storage } from '@ionic/storage';
+
 
 @Component({
   selector: "app-login",
@@ -20,7 +23,9 @@ export class LoginPage implements OnInit {
 
   constructor(
     public registerSrv: RegisterService,
-    public router : Router) {}
+    public router : Router,
+    public storage : Storage,
+    public navCtr : NavController) {}
 
   ngOnInit() {}
 
@@ -43,13 +48,21 @@ export class LoginPage implements OnInit {
           this.errorText = "Email atau password salah";
         }
         else{
-          this.router.navigateByUrl('/tabs');
+          console.log(res.uid);
+          this.toHomePage(res.uid);
         }}
       );
     }
   }
 
+  async toHomePage(userId: any) {
+    await this.storage.set('userId', userId);
+    await this.navCtr.navigateForward(['/tabs/tab1']);
+  }
+
   toRegister(){
     this.router.navigateByUrl('/register');
   }
+
+
 }

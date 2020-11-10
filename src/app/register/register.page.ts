@@ -1,7 +1,9 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { MaungImage } from "../../assets";
 import { Router } from '@angular/router';
+import { Md5 } from "md5-typescript";
 import { RegisterService } from '../service/register.service';
+import { Storage } from '@ionic/storage';
 
 @Component({
   selector: 'app-register',
@@ -19,7 +21,8 @@ export class RegisterPage implements OnInit {
 
   constructor(
     private route : Router,
-    private registerSrv : RegisterService) { }
+    private registerSrv : RegisterService,
+    private storage : Storage) { }
 
   ngOnInit() {
 
@@ -35,7 +38,7 @@ export class RegisterPage implements OnInit {
         image : "base64",
         nama : this.namaText,
         username : this.usernameText,
-        password : this.passwordText,
+        password : Md5.init(this.passwordText),
       };
       console.log(user);
       this.registerSrv.registerUser(user).subscribe(

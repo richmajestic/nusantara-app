@@ -41,10 +41,28 @@ export class RegisterService {
     const headers = new HttpHeaders();
     headers.append('Content-Type,', 'application/x-www-form-urlencoded');
     const options = {headers: headers};
-    console.log(options);
-
-    
-    console.log(LoginUser);
     return this.http.post<any>('https://us-central1-nusantara-8e7ba.cloudfunctions.net/api/login',LoginUser,options);
+  }
+
+  getKategori(userId : any){
+    console.log('getKategori-Service');
+    const data = {
+      uid : userId,
+    };
+    const headers = new HttpHeaders();
+    headers.append('Content-Type,', 'application/x-www-form-urlencoded');
+    const options = {headers: headers};
+    return this.http.post<any>('https://us-central1-nusantara-8e7ba.cloudfunctions.net/api/getKategori',data,options); 
+  }
+
+  getTotalScore(userId : any){
+    console.log('getTotalScore-Service');
+    const data = {
+      uid : userId,
+    };
+    const headers = new HttpHeaders();
+    headers.append('Content-Type,', 'application/x-www-form-urlencoded');
+    const options = {headers: headers};
+    return this.http.post<any>('https://us-central1-nusantara-8e7ba.cloudfunctions.net/api/getTotalScore',data,options); 
   }
 }
