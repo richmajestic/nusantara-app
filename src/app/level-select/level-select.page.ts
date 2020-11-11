@@ -73,7 +73,7 @@ export class LevelSelectPage implements OnInit {
       res=> {
         console.log(res);
         for(let i=0; i<res.length;i++){
-          if(this.kategoriId == res[i].kategori_id){
+          if(this.kategoriId === res[i].kategori_id){
             this.nama_kategori = res[i].nama_kategori;
           }
         }
