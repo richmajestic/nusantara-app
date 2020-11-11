@@ -1,0 +1,78 @@
+@import "../../assets/font/KGCorneroftheSky.scss";
+
+$font-family : 'KG Corner of the Sky';
+
+*{
+  font-family: $font-family;
+  font-size : 12px;
+}
+
+.display-none{
+    display: none;
+}
+
+.custom-item-orange{
+    --background: #f5b461; 
+    --border-radius:15px; 
+    padding:10px
+}
+
+.custom-item-green{
+    --background: #9ad3bc; 
+    --border-radius:15px; 
+    padding:10px
+}
+
+.header{
+    padding : 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.score{
+    background-color : #1F909F;
+    height : 35px;
+}
+
+.profilePic{
+    --border-radius : 50%;
+    height : 45px;
+    width : 45px;
+}
+
+.gambarMacan{
+    margin-bottom: -80px;
+    display:flex;
+    align-items:center;
+}
+
+.boxBiru{
+    display: flex;
+    width: 90%;
+    padding: 28px 22px 28px 22px;
+    justify-content: center;
+    background-color: #cce9dd;
+    border-radius: 28px;
+    margin-bottom: 32px;
+}
+
+.boxPutih{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    padding: 20px 12px 20px 12px;
+    background-color: white;
+    border-radius: 28px;
+}
+
+.scrolling-wrapper {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+  
+    .card {
+      flex: 0 0 auto;
+    }
+}
